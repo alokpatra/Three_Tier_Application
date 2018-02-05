@@ -1,0 +1,15 @@
+# Steps to install and enable Apache
+- name: Install apache
+  yum:
+    name: httpd
+    state: latest
+
+- name: Enable apache
+  service:
+    name: httpd
+    enabled: true
+
+- name: Start apache
+  service:
+    name: httpd
+    state: started
